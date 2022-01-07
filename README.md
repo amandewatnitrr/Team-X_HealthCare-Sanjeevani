@@ -11,7 +11,7 @@
 
 ## Track : Healthcare  :woman_health_worker:
 <p align="center">
-<img style="float=left;" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/img_gif/Iot-cover-image.gif"/>
+<img style="float=left;" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/img_gif/iot-solutions-for-hospital-healthcare-industry.jpg"/>
 </p>
 <br>
 
