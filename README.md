@@ -51,3 +51,14 @@ The website offers people better access to healthcare support beyond their bound
 ## Product :
 1. IoT hardware setup - For Performing tests and obtaining all the medical results
 2. Website and Android App - For health monitoring and medical consultation
+
+## Tech Stack be used :
+![Python](https://img.shields.io/badge/Python-9FEF00?style=flat-square&logo=Python&logoColor=black)
+![Firebase](https://img.shields.io/badge/Firebase-ffcb2c?style=flat-square&logo=Firebase&logoColor=DD1100)
+![Rapspberry Pi](https://img.shields.io/badge/Raspberry_pi-C51A4A?style=flat-square&logo=raspberry-pi&logoColor=white)
+![CAD](https://img.shields.io/badge/CAD-721412?style=flat-square&logo=Prisma&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)
+![AfterEffect](https://img.shields.io/badge/AfterEffects-9999FF?style=flat-square&logo=Adobe&logoColor=black)
