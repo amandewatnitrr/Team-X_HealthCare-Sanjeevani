@@ -72,8 +72,8 @@ public class PatientHomeActivity extends AppCompatActivity {
         myref.child("Blood Pressure").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String currPressure = String.valueOf(snapshot.getValue(Long.class));
-                valBp.setText(currPressure);
+                double currPressure = (double) snapshot.getValue();
+                valTemp.setText(String.valueOf(currPressure));
             }
 
             @Override
