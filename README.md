@@ -61,4 +61,4 @@ The website offers people better access to healthcare support beyond their bound
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)
-![AfterEffect](https://img.shields.io/badge/Adobe After Effects-9999FF?style=flat-square&logo=AfterEffect&logoColor=black)
+![AfterEffect](https://img.shields.io/badge/Adobe After Effects-9999FF?style=flat-square&logo=AfterEffect)
