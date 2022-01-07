@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Sanjeevani Final</string>
+
+    <!--Login Screen-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_pwd">Forgot Password?</string>
+    <string name="newUser">New User?</string>
+    <string name="yetTobeVerified">Your profile is yet to be verified</string>
+
+    <!--Register Screen-->
+    <string name="Name">Name</string>
+    <string name="register">Register</string>
+    <string name="reqMail">Email is required</string>
+    <string name="reqName">Name is required</string>
+    <string name="reqSpl">Specialisation is required</string>
+    <string name="reqID">Medical Registration Number is required</string>
+    <string name="reqPass">Password must be atleast 8 characters long</string>
+    <string name="medID">Medical Registration Number</string>
+    <string name="specialisation">Specialisation</string>
+
+    <!--Registration Popup-->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="patOrDoc">Are you looking for medical consultation?</string>
+
+    <!--PatientHome Activity-->
+    <string name="IOTDeviceID">Sanjeevani Kit ID</string>
+    <string name="realtimeStats">Your Realtime Health Statistics</string>
+    <string name="temp">Temperature(F)</string>
+    <string name="pulse">Pulse Rate(bpm)</string>
+    <string name="bp">Blood Pressure(mmHg)</string>
+    <string name="go">Go</string>
+
+</resources>

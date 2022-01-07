@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "168392742098",
+    "firebase_url": "https://pocket-clinic-8d011.firebaseio.com",
+    "project_id": "pocket-clinic-8d011",
+    "storage_bucket": "pocket-clinic-8d011.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168392742098:android:ebb560b7798607fda8490b",
+        "android_client_info": {
+          "package_name": "com.example.sanjeevanifinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168392742098-k54rsipndb53i4ehkvq3415hddkb242g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanjeevanifinal",
+            "certificate_hash": "1a6a71b13d1b429cf80622fb4882ae4c8e97538f"
+          }
+        },
+        {
+          "client_id": "168392742098-o939vfocehureuijrfal1cv2rb38hpf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiU34fRzMwA2ZmUJIkzct4XCR-7wQ9jiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168392742098-o939vfocehureuijrfal1cv2rb38hpf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
