@@ -49,5 +49,5 @@ The IoT system connects to the cloud that lets the authenticated person keep a r
 The website offers people better access to healthcare support beyond their bounds of convenience and connects them to doctors, specialists and healthcare experts on a digital platform, which provides them access to an online expert without a physical visit. For doctors, it includes a feature to view-track the medical record of the patient regularly and efficiently.
 
 ## Product :
-1. IoT hardware setup - To be worn by the user
+1. IoT hardware setup - For Performing tests and obtaining all the medical results
 2. Website and Android App - For health monitoring and medical consultation
