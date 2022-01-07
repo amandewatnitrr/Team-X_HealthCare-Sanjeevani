@@ -1,4 +1,4 @@
-# **Team-X | HealthCare | Sanjeevani** :briefcase:
+# **Team-X | Sanjeevani** :briefcase:
 <a href="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/tree/master/IoT">
   <img alt="IoT" width="100px" src="https://img.shields.io/badge/IoT-003E54?style=flat-square&logo=SmartThings&logoColor=white" />
 </a>
@@ -10,4 +10,6 @@
 </a>
 
 ## Track : Healthcare  :woman_health_worker:
+<p align="center">
 <img style="float=left;" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/img_gif/Iot-cover-image.gif"/>
+</p>
