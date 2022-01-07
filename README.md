@@ -11,14 +11,14 @@
 
 ## Track : Healthcare  :woman_health_worker:
 <p align="center">
-<img style="float=left;" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/img_gif/Iot-cover-image.gif"/>
+<img style="float=left;" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/img_gif/iot-solutions-for-hospital-healthcare-industry.jpg"/>
 </p>
 <br>
 
 ## Problem Statement :
 Rural and Remote residents encounter barriers to healthcare that restrain their ability to get the medical services they need. The problem of handling and keeping a note and regular monitoring is serious in India. Also, it has been continuously observed in no. of surveys that the nurses and doctors in India suffer through burnout due to heavy workload and hectic schedule, which is a matter of concern. The records of patients are not well-maintained on either grounds and hence seems to be a greater problem in the picture.
 
-<img align="right" src="https://github.com/amandewatnitrr/evolution-hacknitr/blob/main/imgs/hospital.gif" width="45%"/>
+<img align="right" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/img_gif/hospital.gif" width="45%"/>
 
 Also, in the current synopsis, extremely transmittable diseases like COVID-19 have forced people to avail of home hospitalization and treatment and, that's why treating everyone in need of continuous monitoring and regular checkup is difficult. 
 
@@ -35,11 +35,19 @@ India has a vital shortage of trained doctors universally when compared to the W
 - To provide a proper patient medical history management system.
 - To provide proper patient monitoring equipment in remote areas, where medical reach is hard or disconnected due to lack of connectivity.
 - To evolve, innovate and renovate the concept of Tele-medicine using IoT.
-- To promote technical job opportunities for people to work as an authorized user of the MedIoT kit.
+- To promote technical job opportunities for people to work as an authorized user of the Sanjeevani kit.
 - To make the process of Policy claims easier for the patients, with all the legal procedure documents required for policy claims available online
 
-Sanjeevani is an IoT web-based Real-Time Health Monitoring and Medical Consultation System.<br><
+# **Solution :**  	:key:
+
+## **Sanjeevani**
+<img align="left" style="float=left;" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/img_gif/bb0cc783196fa9b2119864ff90eb5702.gif" width="53%"/>
+Sanjeevani is an IoT web-based Real-Time Health Monitoring and Medical Consultation System.<br><br>
 
 The IoT system connects to the cloud that lets the authenticated person keep a real-time check on some basic parameters like Heart-Rate, Blood Pressure, Temperature, ECG Function, Glucose Level, Dissolved Oxygen Level, etc. Using Bio-Sensors and Microprocessor that transmits the data to Firebase and Udibots for storage in the database and henceforth is accessible by the authenticated person(doctor and the user).<br><br>
 
 The website offers people better access to healthcare support beyond their bounds of convenience and connects them to doctors, specialists and healthcare experts on a digital platform, which provides them access to an online expert without a physical visit. For doctors, it includes a feature to view-track the medical record of the patient regularly and efficiently.
+
+## Product :
+1. IoT hardware setup - For Performing tests and obtaining all the medical results
+2. Website and Android App - For health monitoring and medical consultation
