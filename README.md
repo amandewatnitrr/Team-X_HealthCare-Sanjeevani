@@ -38,7 +38,7 @@ India has a vital shortage of trained doctors universally when compared to the W
 - To promote technical job opportunities for people to work as an authorized user of the MedIoT kit.
 - To make the process of Policy claims easier for the patients, with all the legal procedure documents required for policy claims available online
 
-Sanjeevani is an IoT web-based Real-Time Health Monitoring and Medical Consultation System.<br><
+Sanjeevani is an IoT web-based Real-Time Health Monitoring and Medical Consultation System.<br>
 
 The IoT system connects to the cloud that lets the authenticated person keep a real-time check on some basic parameters like Heart-Rate, Blood Pressure, Temperature, ECG Function, Glucose Level, Dissolved Oxygen Level, etc. Using Bio-Sensors and Microprocessor that transmits the data to Firebase and Udibots for storage in the database and henceforth is accessible by the authenticated person(doctor and the user).<br><br>
 
