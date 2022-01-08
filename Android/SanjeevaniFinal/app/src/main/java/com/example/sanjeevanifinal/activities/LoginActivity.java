@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseDatabase db;
     private DatabaseReference myref;
+    private SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     String role = snapshot.getValue(String.class);
+                                    saveUserRole(role);
                                     loginUserAsPerRole(role,userID);
                                 }
 
@@ -101,6 +104,12 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private void saveUserRole(String role) {
+        SharedPreferences.Editor editor = getSharedPreferences("role" , MODE_PRIVATE).edit();
+        editor.putString("userRole", role);
+        editor.commit();
+    }
+
     private void initialiseWidgets() {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
@@ -109,28 +118,35 @@ public class LoginActivity extends AppCompatActivity {
         forgotPwd = findViewById(R.id.forgotPwd);
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
+        prefs = getSharedPreferences("role",MODE_PRIVATE);
         checkIfUserIsAlreadyLoggedIn();
     }
 
     private void checkIfUserIsAlreadyLoggedIn() {
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user!=null){
-            String userID = user.getUid();
-            myref = db.getReference("roles");
+        String role = prefs.getString("userRole","");
+        if(role==null || role.length()==0){
+            FirebaseUser user = mAuth.getCurrentUser();
+            if(user!=null){
+                String userID = user.getUid();
+                myref = db.getReference("roles");
 
-            myref.child(userID).addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    String role = snapshot.getValue(String.class);
-                    loginUserAsPerRole(role,userID);
-                }
+                myref.child(userID).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String Role = snapshot.getValue(String.class);
+                        loginUserAsPerRole(Role,userID);
+                    }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
 
-                }
-            });
+                    }
+                });
+            }
+        }else {
+            loginUserAsPerRole(role,mAuth.getCurrentUser().getUid());
         }
+
     }
 
     private boolean validateLogin(String mail, String password) {
