@@ -21,7 +21,7 @@ The files cannot be shared as they are subjected for confidential research purpo
 ## Our IoT Dashboard and Circuitry
 <p align="center">
   <img width="40%" src="https://github.com/amandewatnitrr/evolution-hacknitr/blob/main/imgs/IMG20200820035139.jpg">
-  <img width="60%" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/IoT/firebase.PNG">
+  <img width="50%" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/IoT/firebase.PNG">
 </p>
 
 ## Setting Up the Raspberry Pi
