@@ -10,15 +10,6 @@
     </item>
 
     <item
-        android:id="@+id/monitorHealth"
-        android:enabled="true"
-        android:icon="@drawable/health_monitoring"
-        android:title="Realtime-Health Monitoring"
-        android:visible="true">
-
-    </item>
-
-    <item
         android:id="@+id/calls"
         android:enabled="true"
         android:icon="@drawable/calls"

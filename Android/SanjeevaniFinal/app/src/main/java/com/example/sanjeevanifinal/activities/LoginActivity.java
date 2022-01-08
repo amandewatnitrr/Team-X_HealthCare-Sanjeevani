@@ -124,8 +124,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void checkIfUserIsAlreadyLoggedIn() {
         String role = prefs.getString("userRole","");
+        FirebaseUser user = mAuth.getCurrentUser();
         if(role==null || role.length()==0){
-            FirebaseUser user = mAuth.getCurrentUser();
             if(user!=null){
                 String userID = user.getUid();
                 myref = db.getReference("roles");
@@ -144,7 +144,9 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         }else {
-            loginUserAsPerRole(role,mAuth.getCurrentUser().getUid());
+            if(user!=null){
+                loginUserAsPerRole(role,mAuth.getCurrentUser().getUid());
+            }
         }
 
     }
@@ -177,6 +179,9 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,R.string.yetTobeVerified,Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(LoginActivity.this,"Welcome Doctor!",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this,ChatListActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
                 }
 

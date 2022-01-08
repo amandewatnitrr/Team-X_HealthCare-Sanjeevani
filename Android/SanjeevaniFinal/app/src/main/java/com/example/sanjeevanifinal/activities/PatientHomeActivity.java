@@ -3,6 +3,7 @@ package com.example.sanjeevanifinal.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -12,10 +13,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sanjeevanifinal.R;
 import com.example.sanjeevanifinal.utils.BottomNavigationHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +34,31 @@ public class PatientHomeActivity extends AppCompatActivity {
     private View linStats;
     private TextView valTemp, valBp, valPulse;
     private SharedPreferences prefs;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        signoutCurrUser();
+        return(super.onOptionsItemSelected(item));
+    }
+
+    private void signoutCurrUser() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        if(user!=null){
+            getSharedPreferences("role",MODE_PRIVATE).edit().clear().commit();
+            getSharedPreferences("kit" , MODE_PRIVATE).edit().clear().commit();
+            Intent intent = new Intent(PatientHomeActivity.this,LoginActivity.class);
+            auth.signOut();
+            startActivity(intent);
+            finish();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +131,6 @@ public class PatientHomeActivity extends AppCompatActivity {
         valTemp = findViewById(R.id.valTemp);
         valBp = findViewById(R.id.valBp);
         valPulse = findViewById(R.id.valPulse);
-        linStats.setVisibility(View.GONE);
         prefs = getSharedPreferences("kit", MODE_PRIVATE);
         editKitID.setText(prefs.getString("savedKitID", "Sanjeevani Kit ID"));
 

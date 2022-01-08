@@ -12,10 +12,20 @@
         android:id="@+id/messageList"
         android:layout_above="@+id/sendLayout"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/messageList"
+        android:id="@+id/btn_newcall"
+        app:layout_anchorGravity="bottom|right|end" />
+
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:id="@+id/sendLayout">
 

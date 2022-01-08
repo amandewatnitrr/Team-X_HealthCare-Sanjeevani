@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,10 +20,12 @@ import android.widget.Toast;
 import com.example.sanjeevanifinal.R;
 import com.example.sanjeevanifinal.adapters.ChatListAdapter;
 import com.example.sanjeevanifinal.utils.BottomNavigationHelper;
+import com.example.sanjeevanifinal.utils.BottomNavigationHelperForDoctor;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,19 +48,49 @@ public class ChatListActivity extends AppCompatActivity {
     String currUserRole;
     long numOfChats;
     int currCount=0;
+    private BottomNavigationView bottomNavigationView;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        signoutCurrUser();
+        return(super.onOptionsItemSelected(item));
+    }
+
+    private void signoutCurrUser() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        if(user!=null){
+            getSharedPreferences("role",MODE_PRIVATE).edit().clear().commit();
+            getSharedPreferences("kit" , MODE_PRIVATE).edit().clear().commit();
+            Intent intent = new Intent(ChatListActivity.this,LoginActivity.class);
+            auth.signOut();
+            startActivity(intent);
+            finish();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_list);
-        newChatbtn = findViewById(R.id.btn_new);
         prefs = getSharedPreferences("role",MODE_PRIVATE);
         currUserRole = prefs.getString("userRole","");
+
         if (currUserRole.equals("Patient")){
+            setContentView(R.layout.activity_chat_list);
+            newChatbtn = findViewById(R.id.btn_new);
             setUpBottomNavigationView();
             currUserRole = "patient";
         }else {
+            setContentView(R.layout.activity_chat_list_for_doctor);
+            newChatbtn = findViewById(R.id.btn_new);
             newChatbtn.setVisibility(View.GONE);
+            setUpBottomNavigationViewForDoctor();
             currUserRole = "doctor";
         }
         chatList = findViewById(R.id.chatList);
@@ -71,6 +104,15 @@ public class ChatListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void setUpBottomNavigationViewForDoctor() {
+        bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavViewBar);
+        bottomNavigationView.setItemIconTintList(null);
+        BottomNavigationHelperForDoctor.enableNavigation(ChatListActivity.this,bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(ActivityNum);
+        menuItem.setChecked(true);
     }
 
     private void initPrevChats() {
@@ -134,7 +176,7 @@ public class ChatListActivity extends AppCompatActivity {
     }
 
     private void setUpBottomNavigationView(){
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavViewBar);
+        bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavViewBar);
         bottomNavigationView.setItemIconTintList(null);
         BottomNavigationHelper.enableNavigation(ChatListActivity.this,bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();

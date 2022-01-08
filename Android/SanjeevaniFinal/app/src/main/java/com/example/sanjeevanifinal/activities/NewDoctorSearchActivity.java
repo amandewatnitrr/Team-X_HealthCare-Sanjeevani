@@ -99,8 +99,6 @@ public class NewDoctorSearchActivity extends AppCompatActivity {
         final Map map = new HashMap<>();
         myref = db.getReference().child("consulation");
         String chatRoomID = myref.push().getKey();
-        /*map.put(uidDoc,nameDoc);
-        map.put(uidPat,namePat);*/
         map.put("uidDoc",uidDoc);
         map.put("uidPat",uidPat);
         map.put("nameDoc",nameDoc);

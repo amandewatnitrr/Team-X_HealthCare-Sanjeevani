@@ -33,4 +33,6 @@
     <string name="bp">Blood Pressure(mmHg)</string>
     <string name="go">Go</string>
 
+    <string name="googleMapKey">AIzaSyCSjdHrvFbUX3qTW4w4bjzeYRZZ0znlur8</string>
+
 </resources>

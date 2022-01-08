@@ -9,10 +9,9 @@ import androidx.annotation.NonNull;
 import com.example.sanjeevanifinal.R;
 import com.example.sanjeevanifinal.activities.CallsActivity;
 import com.example.sanjeevanifinal.activities.ChatListActivity;
-import com.example.sanjeevanifinal.activities.PatientHomeActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class BottomNavigationHelper {
+public class BottomNavigationHelperForDoctor {
 
     public static void enableNavigation(final Context context , BottomNavigationView view){
         view.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -24,11 +23,6 @@ public class BottomNavigationHelper {
                     case R.id.doctorChats:
                         Intent intent1 = new Intent(context, ChatListActivity.class);
                         context.startActivity(intent1);
-                        break;
-
-                    case R.id.monitorHealth:
-                        Intent intent2 = new Intent(context, PatientHomeActivity.class);
-                        context.startActivity(intent2);
                         break;
 
                     case R.id.calls:
