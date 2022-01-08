@@ -62,3 +62,25 @@ The website offers people better access to healthcare support beyond their bound
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)
 ![AfterEffect](https://img.shields.io/badge/AfterEffects-9999FF?style=flat-square&logo=Adobe&logoColor=black)
+
+## Actual Connection of Sanjeevani: :desktop_computer:
+The Ideation Circuit structure consists of total 5 sensors which include an ECG Module, Pulse Oximeter, Temperature Sensor, Glucometer, Blood Pressure module connected to a Biometric Shield that receives manages all the sensors and is connected to Raspberry Pi. The Raspberry Pi is powered using a Common Laptop Battery System for operation and also connected to input device for user input. The Touch Screen is provided for interactive purpose. The user will only need to perform test on the patients and the data will be recorded. We have a GSM Module to ensure 24*7 connectivity to the internet. The data is sent to Ubidots for charting purpose and can be accessed directly using APIs.
+
+**(Note: As due to limitation of availability and high cost of bio-senosrs, other sensors have been brought into use, as an alternative for prototyping here.)**
+
+## Business Model / StartUp Potential  	:moneybag:
+
+Sanjeevani would be available both as a product and service for the customers. The customer will subscribe to our services. We would market our system to the general public and aware the doctors and medical fraternity of the benefits of our product. Our product is helful for all kinds of patients who aren't comfortable/able to visit the doctors/physicians physically. It is equally beneficial for the doctors. 
+
+## Team Members - Domains :family_man_boy_boy:
+<img align="right" src="https://github.com/amandewatnitrr/evolution-hacknitr/blob/main/imgs/desk-loop.gif" width="40%"/>
+
+1. Shruti Rawal- 4th Year (Information Technology)  
+College : National Institute of Technolgy Raipur  
+Domain : Android Developer
+2. Aman Kumar Dewangan - 4th Year (Electrical Engineering)  
+College : National Institute of Technolgy Raipur  
+Domain : IoT Developer
+3. Neeraj Kumar Pathak - 4th Year (Information Technology)  
+College : National Institute of Technolgy Raipur  
+Domain : Web Developer
