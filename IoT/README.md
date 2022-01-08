@@ -21,6 +21,7 @@ The files cannot be shared as they are subjected for confidential research purpo
 ## Our IoT Dashboard and Circuitry
 <p align="center">
   <img width="40%" src="https://github.com/amandewatnitrr/evolution-hacknitr/blob/main/imgs/IMG20200820035139.jpg">
+  <img width="50%" src="https://github.com/ShrutiRawal/Team-X_HealthCare-Sanjeevani/blob/master/IoT/firebase.PNG">
 </p>
 
 ## Setting Up the Raspberry Pi
@@ -30,50 +31,41 @@ The files cannot be shared as they are subjected for confidential research purpo
 ```pip
 pip3 install -r requirements.txt 
 ```
-4. Now as you are ready to work with, in oerder to make it work, you need to make your account on Udibots and also, login to your firebase console.
-5. In order to make it work, you need to change, the device token, and device label to one you have created.
+4. Now as you are ready to work with, in order to make it work, you need to login to your firebase console.
+5. In order to make it work, you need to change, the device token, and DSN.
+
 ```python3
-#For Udibots only
-
-TOKEN = "BBFF-5NwkUEf1PzXTAN856gkXtXy8Dp6IhC"  # Put yIoTour TOKEN here (LINE 12)
-DEVICE_LABEL = "mediot"  # Put your device label here (LINE 13)
+TOKEN = "AIzaSyCiU34fRzMwA2ZmUJIkzct4XCR-7wQ9jiw"  # Put your TOKEN here
+DSN = 'https://pocket-clinic-8d011.firebaseio.com/' # 'https://myapp.firebaseio.com/'
 ```
-6. Change the variable labels, to the one, you have created.
+
+6. Change the conifgs.
 ```python3
-(LINE 14 - 17)
-
-VARIABLE_LABEL_1 = "altitude"  # Put your first variable label here
-VARIABLE_LABEL_2 = "oxy"  # Put your second variable label here
-VARIABLE_LABEL_3 = "pressure"  # Put your second variable label here
-VARIABLE_LABEL_4 = "temp"  # Put your second variable label here
-
-# Similarly you can create more variables in the same manner, but be careful that it should be same as the API Label of Variable on Udibots.
+config = {
+  "apiKey": "database-secret",
+  "authDomain": "something.firebaseapp.com",
+  "databaseURL": "https://something.firebaseio.com/",
+  "storageBucket": "something.appspot.com"
+}
 ```
-7. Now, create a dictionary as shown below:
+7. Read the Readings from Sensor.
 ```python3
-payload = {VARIABLE_LABEL_1: value_1,VARIABLE_LABEL_2: value_2,VARIABLE_LABEL_3: value_3,VARIABLE_LABEL_4: value_4}
-
-# The Variable Labels has already been set, the 'value_1' and others store the data obtained from the sensors.
+ temp = format(sensor.read_temperature())
+    pres = format(sensor.read_pressure())
+    oxi_level = format(95+float(decimal.Decimal(random.randrange(-85,198))/100))
+    if temp is not None and pres is not None and oxi_level is not None:  
+        #str_temp = ' {0:0.2f} *C '.temp    
+        #str_pres  = ' {0:0.2f} %'.pres
+        #str_alti = ' {0:0.2f} m'.alti
+        print('Temp = {0:0.2f} *C'.format(sensor.read_temperature()))
+        print('Pressure = {0:0.2f} KPa'.format(sensor.read_pressure()/1000))
+        print('Oxygen Saturation = {0:0.2f} %'.format(float(oxi_level)))
+        print('Sealevel Altitude = {0:0.2f} m'.format(sensor.read_altitude()))
 ```
-8. Now, the code is **configured and ready to work with Udibots**.
-
-**Now, let's configure the code to work with Firebase**
-9. Now, open your firbase console.
-11. Create a real-time database and, than look for a similar URL as shown below:
+8. Publish the data to specific branch with the Firebase Database Tree.
 ```python3
-DSN = 'https://bmp180-1569c.firebaseio.com/' # 'https://myapp.firebaseio.com/' (LINE 20)
-
-# Replace it with the one you created.
-firebase = firebase.FirebaseApplication(DSN) (LINE 25)
-```
-12. Set the real-time database authentication to NULL.
-```Java
-auth = NULL;
-```
-14. Create a dictionary, that stores a relevant name of information being sent along with the vallues. Also, keep this in consideration that each time we push the data, a new node will be created which is a bit problem of concern, but can be rectified.
-```python3
-data = {"temp": sensor.read_temperature(), "pressure": sensor.read_pressure(), "oxysat": oxi_level} (LINE 87) 
-firebase.post('/sensor/mediot', data) #Edit the nodes as you want them to appear on the firebase (LINE 88)
+ data = {"Temperature": sensor.read_temperature(), "Blood Pressure": sensor.read_pressure(), "Pulse rate": oxi_level}                       
+    db.child("iot").child("0001").set(data)
 ```
 # Now, you are ready to go ahead :smile:
 <p align="center"> 
