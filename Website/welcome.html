@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanjeevani</title>
     <link rel="stylesheet" href="./welcome.css" />
-    <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-    />
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
-    rel="stylesheet"
-    />
-    <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
-    ></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
 </head>
-<body>
-    <center><div style="margin:100px; padding-bottom: 30px">
-        <span class="message">Welcome to Sanjeevani</span>
-        <div class="success"><span>Enter you Sanjeevani Kit ID to begin</span></div><br/>
-        <label class="custom-field">
-            <input id="kitID" type="text" class="input" required />
-            <span class="placeholder">Sanjeevani Kit ID</span>
-        </label>
-        <button class="myBtn" onclick="findContainer()">GO</button>
-    </div></center>
 
-    <center><div id="valueContainer" style="margin: 30px; padding-bottom: 30px;display: none;">
-        <div class="success">
-            <span class="key">Temperature(C)</span><span class="value" id="temp">Loading...</span><br>
-            <span class="key">Blood Pressure(mmHg)</span><span class="value" id="bp">Loading...</span><br>
-            <span class="key">Pulse Rate (bpm)</span><span class="value" id="pulse">Loading...</span><br>
+<body>
+    <center>
+        <div style="margin:100px; padding-bottom: 30px">
+            <span class="message">Welcome to Sanjeevani</span>
+            <div class="success"><span>Enter you Sanjeevani Kit ID to begin</span></div><br />
+            <label class="custom-field">
+                <input id="kitID" type="text" class="input" required />
+                <span class="placeholder">Sanjeevani Kit ID</span>
+            </label>
+            <button class="myBtn" onclick="findContainer()">GO</button>
         </div>
-    </div></center>
+    </center>
+
+    <center>
+        <div id="valueContainer" style="margin: 30px; padding-bottom: 30px;display: none;">
+            <div class="success">
+                <span class="key">Temperature(C)</span><span class="value" id="temp">Loading...</span><br>
+                <span class="key">Blood Pressure(mmHg)</span><span class="value" id="bp">Loading...</span><br>
+                <span class="key">Pulse Rate (bpm)</span><span class="value" id="pulse">Loading...</span><br>
+            </div>
+        </div>
+    </center>
 
     <input type="checkbox" id="ham-menu">
     <label for="ham-menu">
@@ -54,10 +51,10 @@
     <div class="ham-menu">
         <ul class="centre-text bold-text">
             <li><a href="welcome.html">Dashboard</a></li>
-            <li><a href="doctorConsultation.html">Doctor Consultation</a></li>
-            <li><a href="myApp.html">My Appointments</a></li>
-            <li>Contact Us</li>
-            <li onclick="logout()">Logout</li>
+            <li><a href="doctorConsultation.html">Consultation</a></li>
+            <li><a href="myApp.html">Appointments</a></li>
+            <li><a href="welcome.html">Contact Us</a></li>
+            <li class="extra" onclick="logout()">Logout</li>
 
         </ul>
     </div>
@@ -73,4 +70,5 @@
     <script src="firebase.js"></script>
     <script src="welcome.js"></script>
 </body>
+
 </html>
