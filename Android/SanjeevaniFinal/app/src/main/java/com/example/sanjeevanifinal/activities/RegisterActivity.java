@@ -126,6 +126,7 @@ public class RegisterActivity extends AppCompatActivity {
         myref = db.getReference("patient").child(userID).child("info");
         myref.child("name").setValue(name);
         myref.child("email").setValue(email);
+        myref.child("UID").setValue(userID);
         myref = db.getReference("roles");
         myref.child(userID).setValue("Patient");
     }
@@ -186,6 +187,7 @@ public class RegisterActivity extends AppCompatActivity {
         myref.child("specialisation").setValue(specialisation);
         myref.child("medID").setValue(medID);
         myref.child("isVerified").setValue("false");
+        myref.child("UID").setValue(userID);
         myref = db.getReference("roles");
         myref.child(userID).setValue("Doctor");
         myref = db.getReference().child("specialisation").child(specialisation);
