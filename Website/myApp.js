@@ -5,6 +5,19 @@ var times = [];
 var c=0;
 var curr=0;
 
+firebase.auth().onAuthStateChanged((user)=>{
+    if(!user){
+        location.replace("index.html")
+    }
+})
+
+var database = firebase.database();
+
+
+function logout(){
+    firebase.auth().signOut()
+}
+
 function findApps(){
     firebase.auth().onAuthStateChanged((user)=>{
         if(user){

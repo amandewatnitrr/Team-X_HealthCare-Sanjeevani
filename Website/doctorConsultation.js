@@ -4,6 +4,19 @@ var names = [];
 var c=0;
 var curr=0;
 
+firebase.auth().onAuthStateChanged((user)=>{
+    if(!user){
+        location.replace("index.html")
+    }
+})
+
+var database = firebase.database();
+
+
+function logout(){
+    firebase.auth().signOut()
+}
+
 function findDocs(){
     var docRef = firebase.database().ref('doctor');
     docRef.once("value", snap=> {
@@ -36,4 +49,8 @@ function updateUI(item){
     uiUpdateNode.appendChild(upNode);
     document.getElementById("info").appendChild(uiUpdateNode);
     curr++;
+}
+
+function openChatWindow(){
+    location.replace("chat.html");
 }

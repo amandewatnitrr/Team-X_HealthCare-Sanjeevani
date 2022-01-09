@@ -7,16 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanjeevani</title>
     <link rel="stylesheet" href="./welcome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
 </head>
 
-<body onload="findDocs()">
+<body onload="findApps()">
     <center>
         <div style="margin:100px; padding-bottom: 30px">
-            <span class="message">Available Doctors</span>
-            <ul class="success" id="info" onclick="openChatWindow()"></ul>
+            <span class="message" style="margin: 40px;">Chat with Dr. Anju Rawal</span>
+            <div class="panel-footer">
+                <div class="input-group">
+                    <input id="btn-input" type="text" style="height: 40px;margin: 40px;" class="form-control input-sm chat_input custom-field" placeholder="Write your message here..." />
+                    <span class="input-group-btn">
+                    <button class="btn btn-primary btn-sm" style="height: 40px;margin-top: 40px; width: 40px;" id="btn-chat"><i class="fa fa-send fa-1x" aria-hidden="true"></i></button>
+                    </span>
+                </div>
+            </div>
         </div>
     </center>
 
@@ -53,7 +61,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
 
     <script src="firebase.js"></script>
-    <script src="doctorConsultation.js"></script>
 </body>
 
 </html>
