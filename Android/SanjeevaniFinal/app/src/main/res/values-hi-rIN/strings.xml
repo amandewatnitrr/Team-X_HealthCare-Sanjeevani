@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">संजीवनी</string>
+    <string name="email">ईमेल</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="forgot_pwd">पासवर्ड भूल गए?</string>
+    <string name="yetTobeVerified">आपकी प्रोफ़ाइल का सत्यापन होना बाकी है</string>
+    <string name="Name">नाम</string>
+    <string name="register">रजिस्टर करें</string>
+    <string name="medID">चिकित्सा पंजीकरण संख्या</string>
+    <string name="specialisation">विशेषज्ञता</string>
+    <string name="yes">हां</string>
+    <string name="no">नहीं</string>
+    <string name="patOrDoc">क्या आप चिकित्सकीय परामर्श की तलाश में हैं?</string>
+</resources>

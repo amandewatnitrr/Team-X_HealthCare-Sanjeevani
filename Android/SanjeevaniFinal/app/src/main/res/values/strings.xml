@@ -1,22 +1,22 @@
 <resources>
-    <string name="app_name">Sanjeevani Final</string>
+    <string name="app_name">Sanjeevani</string>
 
     <!--Login Screen-->
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="forgot_pwd">Forgot Password?</string>
-    <string name="newUser">New User?</string>
+    <string name="newUser" translatable="false">New User?</string>
     <string name="yetTobeVerified">Your profile is yet to be verified</string>
 
     <!--Register Screen-->
     <string name="Name">Name</string>
     <string name="register">Register</string>
-    <string name="reqMail">Email is required</string>
-    <string name="reqName">Name is required</string>
-    <string name="reqSpl">Specialisation is required</string>
-    <string name="reqID">Medical Registration Number is required</string>
-    <string name="reqPass">Password must be atleast 8 characters long</string>
+    <string name="reqMail" translatable="false">Email is required</string>
+    <string name="reqName" translatable="false">Name is required</string>
+    <string name="reqSpl" translatable="false">Specialisation is required</string>
+    <string name="reqID" translatable="false">Medical Registration Number is required</string>
+    <string name="reqPass" translatable="false">Password must be atleast 8 characters long</string>
     <string name="medID">Medical Registration Number</string>
     <string name="specialisation">Specialisation</string>
 
@@ -26,13 +26,13 @@
     <string name="patOrDoc">Are you looking for medical consultation?</string>
 
     <!--PatientHome Activity-->
-    <string name="IOTDeviceID">Sanjeevani Kit ID</string>
-    <string name="realtimeStats">Your Realtime Health Statistics</string>
-    <string name="temp">Temperature(F)</string>
-    <string name="pulse">Pulse Rate(bpm)</string>
-    <string name="bp">Blood Pressure(mmHg)</string>
-    <string name="go">Go</string>
+    <string name="IOTDeviceID" translatable="false">Sanjeevani Kit ID</string>
+    <string name="realtimeStats" translatable="false">Your Realtime Health Statistics</string>
+    <string name="temp" translatable="false">Temperature(F)</string>
+    <string name="pulse" translatable="false">Pulse Rate(bpm)</string>
+    <string name="bp" translatable="false">Blood Pressure(mmHg)</string>
+    <string name="go" translatable="false">Go</string>
 
-    <string name="googleMapKey">AIzaSyCSjdHrvFbUX3qTW4w4bjzeYRZZ0znlur8</string>
+    <string name="googleMapKey" translatable="false">AIzaSyCSjdHrvFbUX3qTW4w4bjzeYRZZ0znlur8</string>
 
 </resources>

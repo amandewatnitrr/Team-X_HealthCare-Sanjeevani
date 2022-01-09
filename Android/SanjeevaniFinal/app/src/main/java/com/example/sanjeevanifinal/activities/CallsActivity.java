@@ -30,6 +30,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+//import org.jitsi.meet.sdk.JitsiMeetActivity;
+//import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
 import java.util.ArrayList;
 
 public class CallsActivity extends AppCompatActivity {
@@ -90,6 +96,11 @@ public class CallsActivity extends AppCompatActivity {
         callList = findViewById(R.id.callList);
         initCallList();
 
+    }
+
+    private void startmeet(String code){
+        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder().setRoom(code).setWelcomePageEnabled(false).build();
+        JitsiMeetActivity.launch(CallsActivity.this,options);
     }
 
     private void initCallList() {
@@ -161,6 +172,7 @@ public class CallsActivity extends AppCompatActivity {
 
     public void goToMeet(View view) {
         TextView linkTxt = view.findViewById(R.id.link);
-        Toast.makeText(CallsActivity.this,linkTxt.getText().toString(),Toast.LENGTH_SHORT).show();
+        startmeet(linkTxt.getText().toString());
+        //Toast.makeText(CallsActivity.this,linkTxt.getText().toString(),Toast.LENGTH_SHORT).show();
     }
 }

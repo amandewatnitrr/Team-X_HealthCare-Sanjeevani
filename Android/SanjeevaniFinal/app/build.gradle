@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.sanjeevanifinal"
-        minSdkVersion 17
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
@@ -48,7 +49,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
 
-    testImplementation 'junit:junit:4.+'
+    implementation('org.jitsi.react:jitsi-meet-sdk:3.+') { transitive = true }
+    implementation 'com.android.support:multidex:1.0.3'
+
+    testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }

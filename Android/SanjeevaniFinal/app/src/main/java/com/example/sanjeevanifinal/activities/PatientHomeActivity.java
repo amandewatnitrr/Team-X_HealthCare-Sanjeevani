@@ -101,8 +101,8 @@ public class PatientHomeActivity extends AppCompatActivity {
         myref.child("Blood Pressure").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String currPressure = String.valueOf(snapshot.getValue(Long.class));
-                valBp.setText(currPressure);
+                double currPressure = snapshot.getValue(Double.class);
+                valBp.setText(String.valueOf(currPressure));
             }
 
             @Override
@@ -113,7 +113,7 @@ public class PatientHomeActivity extends AppCompatActivity {
         myref.child("Pulse rate").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String currPulse = String.valueOf(snapshot.getValue(Long.class));
+                String currPulse = snapshot.getValue(String.class);
                 valPulse.setText(currPulse);
             }
 
