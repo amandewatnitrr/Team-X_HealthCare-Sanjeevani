@@ -57,3 +57,7 @@ function updateUI(item){
     document.getElementById("info").appendChild(uiUpdateNode);
     curr++;
 }
+
+function redirectToMeeting(){
+    window.open("https://meet.google.com/rkq-fkjv-nit", "_blank");
+}
